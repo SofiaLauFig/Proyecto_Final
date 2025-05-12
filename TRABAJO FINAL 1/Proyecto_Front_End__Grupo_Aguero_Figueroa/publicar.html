@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ficha del Animal</title>
+  <link rel="stylesheet" href="estilos-ficha.css">
+</head>
+<body>
+
+  <div class="ficha-container">
+    <h1>Ficha del Animal</h1>
+    <form class="ficha-form" enctype="multipart/form-data">
+
+      <!-- Datos de la mascota -->
+      <fieldset>
+        <legend>Datos de la mascota</legend>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: Luna" required>
+
+        <label for="animal">Tipo de animal:</label>
+        <select id="animal" name="animal">
+          <option value="gato">Gato</option>
+          <option value="perro">Perro</option>
+          <option value="otro">Otro</option>
+        </select>
+
+        <label for="edad">Edad:</label>
+        <select id="edad" name="edad">
+          <option value="">Seleccionar</option>
+          <option value="cachorro">Cachorro</option>
+          <option value="adulto">Adulto</option>
+          <option value="anciano">Anciano</option>
+        </select>
+
+        <label for="tamano">Tamaño:</label>
+        <select id="tamano" name="tamano">
+          <option value="pequeño">Pequeño</option>
+          <option value="mediano">Mediano</option>
+          <option value="grande">Grande</option>
+        </select>
+
+        <label for="color">Color:</label>
+        <select id="color" name="color">
+          <option value="blanco">Blanco</option>
+          <option value="negro">Negro</option>
+          <option value="gris">Gris</option>
+          <option value="beige">Beige/Marrón claro</option>
+          <option value="marron-oscuro">Marrón oscuro</option>
+          <option value="mixto">Mixto</option>
+          <option value="otro">Otro</option>
+        </select>
+
+        <label for="fecha">Perdido hace:</label>
+        <select id="fecha" name="fecha">
+          <option value="1-4-semanas">1-4 semanas</option>
+          <option value="1-3-meses">1-3 meses</option>
+          <option value="4-7-meses">4-7 meses</option>
+          <option value="8-12-meses">8-12 meses</option>
+          <option value="+1-año">Más de 1 año</option>
+        </select>
+
+        <label for="detalle">¿Algún detalle o accesorio?</label>
+        <input type="text" id="detalle" name="detalle" placeholder="Ej: collar rojo, cojea pata trasera...">
+
+        <label for="comentarios">Otros comentarios:</label>
+        <textarea id="comentarios" name="comentarios" rows="3" placeholder="Información adicional..."></textarea>
+      </fieldset>
+
+      <!-- Carga de imágenes -->
+      <fieldset>
+        <legend>Fotos del animal</legend>
+
+        <label for="foto1">Foto 1:</label>
+        <input type="file" id="foto1" name="foto1" accept="image/*" required>
+
+        <label for="foto2">Foto 2 (opcional):</label>
+        <input type="file" id="foto2" name="foto2" accept="image/*">
+
+        <label for="foto3">Foto 3 (opcional):</label>
+        <input type="file" id="foto3" name="foto3" accept="image/*">
+
+        <label for="foto4">Foto 4 (opcional):</label>
+        <input type="file" id="foto4" name="foto4" accept="image/*">
+        
+        <!-- Aquí se agregará la lógica de backend para manejar las fotos -->
+      </fieldset>
+
+      <!-- Ubicación última vez visto -->
+      <fieldset>
+        <legend>Visto por última vez en:</legend>
+        <label for="mapa">Ubicación en el mapa:</label>
+        
+        <!-- El mapa está embebido. Más adelante se puede añadir JavaScript para hacerlo más interactivo -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3137.931134648395!2d-68.1190271!3d-38.9510711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96b4cd4f5ac95dbd%3A0xd07234d7bc6803d!2sParque%20Central%2C%20Neuqu%C3%A9n!5e0!3m2!1ses!2sar!4v1715547100000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+        <!-- Aquí se capturará la ubicación como texto -->
+        <input type="text" id="ubicacion-texto" name="ubicacion" placeholder="Ej: Parque Central, Neuquén" required>
+      </fieldset>
+
+      <!-- Datos de contacto -->
+      <fieldset class="datos-contacto">
+        <legend>Datos de contacto del dueño</legend>
+        <!-- Estos datos se tomarán automáticamente desde el registro del usuario -->
+        <p><strong>Nombre:</strong> Sofía Laura</p>
+        <p><strong>Apellido:</strong> Figueroa</p>
+        <p><strong>Teléfono:</strong> +54 9 11 1234 5678</p>
+        <p><strong>Email:</strong> sofiafigueroa@email.com</p>
+        <p><strong>Ciudad:</strong> Buenos Aires</p>
+        <p><strong>Redes Sociales:</strong> @sofia.laura (Instagram)</p>
+      </fieldset>
+
+      <button type="submit" class="btn-enviar">Publicar ficha</button>
+    </form>
+  </div>
+
+</body>
+</html>

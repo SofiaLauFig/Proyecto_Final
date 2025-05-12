@@ -1,0 +1,452 @@
+/* RESET GENERAL de margenes para evitar interferencias con el posicionamiento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding y border no afecten el tamaño total del elemento */
+}
+
+/* ESTILOS BASE */
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #f5f5f5b6;
+    color: #424242;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Raleway', sans-serif;
+}
+
+.menu-horizontal a {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Listas sin estilo por defecto */
+ul, ol {
+    list-style: none;
+}
+
+/* Títulos generales */
+h1, h2, h3, h4 { 
+    margin: 10px 0;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+h4 {
+    font-size: 18px;
+    color: #f1f1f1;
+    font-weight: 800;
+    text-align: center;
+}
+
+/* HEADER: Estructura de las secciones */
+.barra-superior-header {
+    background-color: #f1f1f1dc;
+    color: #333;
+    padding: 10px 20px;
+    margin-bottom: 4px;
+    border-bottom: 2px solid #229799;
+}
+
+.top-bar, .botonera {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.botonera a.button {
+    background-color: #229799;
+    color: white;
+    padding: 12px 25px;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.botonera a.button:hover {
+    background-color: #0ddad3;
+    transform: scale(1.1);
+}
+
+.logo-titulo-area {
+    background-color: #424242;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    text-shadow: none;
+}
+
+.logo img {
+    max-width: 250px;
+}
+
+.header-title-bar {
+    flex: 1;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    padding: 15px 0;
+}
+
+.barra-inferior-header {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 5px 20px;
+    text-align: center;
+    margin-top: 4px;
+    border-top: 2px solid #229799;
+    border-bottom: 2px solid #229799;
+    box-shadow: 0 2px 4px rgba(20, 187, 189, 0.993);
+}
+
+/* MENÚ PRINCIPAL */
+nav {
+    background-color: #f1f1f1;
+}
+
+.menu-horizontal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    padding: 4px 20px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.menu-horizontal a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+}
+
+.menu-horizontal a:hover {
+    color: #48CFCB;
+    transform: scale(1.1);
+}
+
+.menu-horizontal a.buscar-item {
+    background-color: #229799;
+    color: white;
+    border-radius: 8px;
+    padding: 12px 20px;
+}
+
+.menu-horizontal a.buscar-item:hover {
+    background-color: #0ddad3;
+    transform: scale(1.1);
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-horizontal > li {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.menu-desplegable {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: #f1f1f1f1;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    border: 4px solid #48CFCB;
+}
+
+.menu-item:hover .menu-desplegable {
+    display: block;
+}
+
+.menu-desplegable label,
+.menu-desplegable select {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+.menu-desplegable label {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.menu-desplegable select {
+    text-align: left;
+}
+
+.menu-desplegable select option {
+    background-color: #f5f5f5;
+    color: #424242;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+}
+
+.menu-desplegable select option:hover {
+    background-color: #229799;
+    color: white;
+}
+
+.menu-desplegable button {
+    background-color: #229799;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-desplegable button:hover {
+    background-color: #0ddad3;
+    transform: scale(1.08);
+}
+
+/* SECCIÓN: RECIENTES */
+
+#recientes {
+    padding: 40px 20px;
+    text-align: center;
+    border: 4px solid #229799; /* Borde verde */
+    background-color: #e0f7fa; /* Fondo azul claro */
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.recientes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.perrito {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 15px;
+    width: 280px;
+}
+
+.perrito img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* GALERÍA */
+#galeria-todos {
+    padding: 40px 20px;
+    background-color: #fef6f3;
+    text-align: center;
+    border: 4px solid #f7b731; /* Borde amarillo */
+    background-color: #fffae6; /* Fondo amarillo claro */
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.animal-perdido {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 10px;
+}
+
+.animal-perdido img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+/* FORO Y NOVEDADES */
+/* SECCIÓN: NOVEDADES */
+#foro-novedades {
+    padding: 40px 20px;
+    border: 4px solid #ff6347; /* Borde rojo */
+    background-color: #ffe5e5; /* Fondo rojo claro */
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.columna {
+    flex: 1;
+}
+
+/* SECCIÓN: MÁS INFORMACIÓN */
+#mas-informacion {
+    padding: 40px 20px;
+    border: 4px solid #2e8b57; /* Borde verde oscuro */
+    background-color: #eaf0ea; /* Fondo verde claro */
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+/* SECCIÓN: LINKS ÚTILES */
+#links-utiles {
+    padding: 40px 20px;
+    border: 4px solid #f39c12; /* Borde naranja */
+    background-color: #ffecb3; /* Fondo naranja claro */
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+/* SECCIÓN: COLABORADORES */
+/* SECCIÓN: COLABORADORES */
+#colaboradores {
+    padding: 40px 20px;
+    border: 4px solid #8e44ad; /* Borde morado */
+    background-color: #f3e5f5; /* Fondo morado claro */
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+/* Contenedor de los colaboradores */
+.colaboradores-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los colaboradores */
+}
+
+/* Estilos para cada colaborador */
+.colaborador {
+    text-align: center;
+}
+
+/* Estilo para las fotos de los colaboradores (rectangulares o cuadradas) */
+.foto-colaborador {
+    width: 100px; /* Tamaño pequeño */
+    height: auto; /* Mantener la proporción de las imágenes */
+    max-height: 100px; /* Limitar la altura a 100px */
+    object-fit: contain; /* Ajustar la imagen dentro del contenedor sin recortarla */
+    margin-bottom: 10px; /* Espacio debajo de la foto */
+}
+
+/* Estilo para los nombres de los colaboradores */
+.nombre-colaborador {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none; /* Eliminar subrayado */
+}
+
+/* Estilo para los enlaces de los colaboradores */
+.colaborador a {
+    text-decoration: none; /* Eliminar subrayado */
+    color: inherit; /* Heredar el color del texto */
+}
+
+/* Efecto al pasar el mouse sobre la foto */
+.colaborador a:hover .foto-colaborador {
+    opacity: 0.8;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Ajustar la sección de colaboradores para pantallas pequeñas */
+    #colaboradores {
+        padding: 30px 15px;
+        border: 3px solid #8e44ad; /* Ajustar borde */
+    }
+
+    /* Colocar los colaboradores en una sola columna en pantallas pequeñas */
+    .colaboradores-container {
+        flex-direction: column;
+        align-items: center; /* Alineación centrada de los colaboradores */
+    }
+
+    /* Reducir el tamaño de las fotos en pantallas pequeñas */
+    .foto-colaborador {
+        width: 80px; /* Tamaño más pequeño para fotos en pantallas pequeñas */
+        max-height: 80px; /* Limitar la altura de las fotos */
+    }
+
+    /* Reducir el tamaño de los textos para pantallas pequeñas */
+    .nombre-colaborador {
+        font-size: 12px;
+    }
+}
+
+/* Estilos generales para otras secciones (pantallas pequeñas) */
+@media (max-width: 768px) {
+    .barra-superior-header, .barra-inferior-header, .logo-titulo-area, .menu-horizontal {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .top-bar {
+        gap: 5px;
+        font-size: 18px;
+    }
+
+    .botonera a.button {
+        font-size: 16px;
+        padding: 10px 18px;
+    }
+
+    .menu-horizontal {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .menu-horizontal a {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .menu-desplegable {
+        width: 100%;
+        padding: 10px;
+    }
+}

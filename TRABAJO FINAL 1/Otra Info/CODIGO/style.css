@@ -1,0 +1,62 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General */
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #F5F5F5;
+    color: #424242;
+}
+
+/* Encabezado */
+header {
+    position: relative;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+/* Barra superior */
+.social-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(72, 207, 203, 0.8);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10; /* Asegura que esté por encima del fondo */
+}
+
+/* Banner principal */
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('nombre-de-la-imagen.jpg'); /* Ruta correcta */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    color: #FFFFFF;
+    padding: 20px;
+    position: relative;
+}
+
+/* Menú inferior */
+.menu-horizontal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #48CFCB;
+    z-index: 10;
+}

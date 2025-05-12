@@ -1,0 +1,22 @@
+*{
+    margin:0;
+    padding:o;
+}
+
+div{
+    widht: 300px;                     /* si pones 100vh * total del alto la pagina completa *pero tapa el footer */
+    height: 250px;                 /* si pones 100 * total del alto de lo que contenga - adaptable */
+    background-color: chartreuse;   /* probar distintos tipos de medidas, %, rem, pixel,  */
+    font-size:larger
+}
+
+div{
+    widht: 300px;
+    height: 250px; 100%                  /* si pones 100 * total del alto de lo que contenga - adaptable */
+    background-color: chartreuse;
+    fontsize: 
+}
+.box-1{
+    border: solid 1px black
+    padding: 5px;
+}

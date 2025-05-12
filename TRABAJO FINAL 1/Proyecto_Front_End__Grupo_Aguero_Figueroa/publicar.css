@@ -1,0 +1,85 @@
+/* CONTENEDOR PRINCIPAL DE LA FICHA */
+.ficha-animal {
+    background-color: #ffffffd9;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    margin: 40px auto;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* TÍTULO PRINCIPAL DE LA FICHA */
+.ficha-animal h2 {
+    font-size: 28px;
+    color: #229799;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* FORMULARIO DE PUBLICACIÓN */
+.ficha-animal form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ETIQUETAS DEL FORMULARIO */
+.ficha-animal label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+/* INPUTS Y TEXTAREAS */
+.ficha-animal input[type="text"],
+.ficha-animal input[type="file"],
+.ficha-animal textarea,
+.ficha-animal select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.ficha-animal input:focus,
+.ficha-animal textarea:focus,
+.ficha-animal select:focus {
+    outline: none;
+    border-color: #229799;
+    box-shadow: 0 0 0 3px rgba(34, 151, 153, 0.2);
+}
+
+/* BOTÓN DE PUBLICAR */
+.ficha-animal button {
+    background-color: #229799;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+}
+
+.ficha-animal button:hover {
+    background-color: #1b7d80;
+}
+
+/* ADAPTACIÓN RESPONSIVA */
+@media (max-width: 600px) {
+    .ficha-animal {
+        padding: 20px;
+    }
+
+    .ficha-animal h2 {
+        font-size: 24px;
+    }
+}

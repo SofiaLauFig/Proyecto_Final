@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Plataforma para encontrar y publicar animales perdidos. Únete a nuestra comunidad para ofrecer apoyo." />
+  <meta name="robots" content="index, follow">
+  <title>Animales Perdidos</title>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="./styles_main.css">
+</head>
+
+<body>
+  <!-- ENCABEZADO -->
+  <header>
+    <section class="barra-superior-header">
+      <div class="top-bar">
+        <div class="header-right">
+          <a href="login.html" class="button">Ingresar</a>
+          <a href="registro.html" class="button">Registrarse</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="logo-titulo-area"> 
+      <div class="logo">
+        <img src="../Fotos/logo de contraste.png" alt="Logo de Animales Perdidos">
+      </div>
+
+      <div class="header-title-bar">
+        <br>
+        <h1> 🐾 Animales Perdidos 🐾 </h1>
+        <h4> Compartí - Buscá - Encontrá </h4> 
+        <br>
+      </div>
+    </section>
+    
+    <section class="barra-inferior-header"> 
+      <nav>
+        <ul class="menu-horizontal">
+          <li class="menu-item">
+            <a href="#buscar" class="menu-buscar">Buscar</a>
+            <ul class="menu-desplegable">
+              <li>
+                <label for="animal">Tipo de animal:</label>
+                <select id="animal" name="animal">
+                  <option value="gato">Gato</option>
+                  <option value="perro">Perro</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </li>
+
+              <li>
+                <label for="color">Color:</label>
+                <select id="color" name="color">
+                  <option value="blanco">Blanco</option>
+                  <option value="negro">Negro</option>
+                  <option value="beige">Beige</option>
+                  <option value="marron-oscuro">Marrón oscuro</option>
+                  <option value="mixto">Mixto</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </li>
+
+              <li>
+                <label for="tamaño">Tamaño:</label>
+                <select id="tamaño" name="tamaño">
+                  <option value="pequeño">Pequeño</option>
+                  <option value="mediano">Mediano</option>
+                  <option value="grande">Grande</option>
+                </select>
+              </li>
+
+              <li>
+                <label for="ciudad">Ciudad:</label>
+                <select id="ciudad" name="ciudad">
+                  <option value="cipolletti">Cipolletti</option>
+                  <option value="neuquen">Neuquén</option>
+                  <option value="fernandez-oro">Gral. Fernández Oro</option>
+                  <option value="plottier">Plottier</option>
+                </select>
+              </li>
+
+              <li>
+                <label for="fecha">Perdido hace:</label>
+                <select id="fecha" name="fecha">
+                  <option value="1-4-semanas">1-4 semanas</option>
+                  <option value="1-3-meses">1-3 meses</option>
+                  <option value="4-7-meses">4-7 meses</option>
+                  <option value="8-12-meses">8-12 meses</option>
+                  <option value="+1-año">Más de 1 año</option>
+                </select>
+              </li>
+
+              <li><button type="submit">Buscar</button></li>
+            </ul>
+          </li>
+          <li><a href="publicar.html">Publicar</a></li>
+          <li><a href="foro.html">Foro</a></li>
+          <li><a href="nosotros.html">Sobre Nos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="inicio.html">Inicio</a></li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <section id="recientes">
+      <h2>🐾 Recientes 🐾</h2>
+      <div class="recientes">
+        <article class="perrito">
+          <img src="../Fotos/Animales Perdidos (3).png" alt="Perrito perdido Coquita" />
+          <h3>Coquita</h3>
+          <p>Descripción: Perra pitbull perdida en el barrio Centro.</p>
+        </article>
+
+        <article class="perrito">
+          <img src="../Fotos/Animales Perdidos (4).png" alt="Perrito perdido Luna" />
+          <h3>Luna</h3>
+          <p>Descripción: Michi miau miau, MIchi.</p>
+        </article>
+
+        <article class="perrito">
+          <img src="../Fotos/Animales Perdidos (5).png" alt="Perrito perdido Rocky" />
+          <h3>Rocky</h3>
+          <p>Descripción: Gato mestizo marrón, visto cerca del parque central.</p>
+        </article>
+      </div>
+    </section>
+
+     <!-- SECCIÓN 2: Galería completa -->
+     <section id="galeria-todos">
+      <h2>🐾 Galería 🐾</h2>
+      <div class="galeria">
+        <article class="animal-perdido">
+          <img src="../Fotos/EJEMPLO2.png" alt="Perrito perdido Coquita 1" />
+          <h3>Coquita</h3>
+        </article>
+        <article class="animal-perdido">
+          <img src="../Fotos/EJEMPLO1.png" alt="Perrito perdido Luna 2" />
+          <h3>Luna</h3>
+        </article>
+        <article class="animal-perdido">
+          <img src="../Fotos/ejemplo3.png" alt="Perrito perdido Rocky 3" />
+          <h3>Rocky</h3>
+        </article>
+        <article class="animal-perdido">
+          <img src="../Fotos/EJEMPLO2.png" alt="Perrito perdido Lila 4" />
+          <h3>Lila</h3>
+        </article>
+        <article class="animal-perdido">
+          <img src="../Fotos/EJEMPLO1.png" alt="Perrito perdido Pili 5" />
+          <h3>Pili</h3>
+        </article>
+        <article class="animal-perdido">
+          <img src="../Fotos/ejemplo3.png" alt="Perrito perdido Chibi 6" />
+          <h3>Chibi</h3>
+        </article>
+        <article class="animal-perdido">
+          <img src="../Fotos/EJEMPLO2.png" alt="Perrito perdido Mumu 7" />
+          <h3>Mumu</h3>
+        </article>
+        <article class="animal-perdido">
+          <img src="../Fotos/EJEMPLO1.png" alt="Perrito perdido Macarena 8 " />
+          <h3>Macarena</h3>
+        </article>
+        <article class="animal-perdido">
+          <img src="../Fotos/EJEMPLO2.png" alt="Perrito perdido Coquita 9" />
+          <h3>Coquita</h3>
+        </article>
+        <article class="animal-perdido">
+          <img src="../Fotos/EJEMPLO1.png" alt="Perrito perdido Luna 10" />
+          <h3>Luna</h3>
+        </article>
+        <article class="animal-perdido">
+          <img src="../Fotos/ejemplo3.png" alt="Perrito perdido Rocky 11 " />
+          <h3>Rocky</h3>
+        </article>
+        <article class="animal-perdido">
+          <img src="../Fotos/EJEMPLO2.png" alt="Perrito perdido Lila 12 " />
+          <h3>Lila</h3>
+        </article>
+        <article class="animal-perdido">
+          <img src="../Fotos/EJEMPLO1.png" alt="Perrito perdido Pili 13" />
+          <h3>Pili</h3>
+        </article>
+        <article class="animal-perdido">
+          <img src="../Fotos/ejemplo3.png" alt="Perrito perdido Chibi 14" />
+          <h3>Chibi</h3>
+        </article>
+        <article class="animal-perdido">
+          <img src="../Fotos/EJEMPLO2.png" alt="Perrito perdido Mumu 15" />
+          <h3>Mumu</h3>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCION 3 DE NOVEDADES-->
+    <section id="novedades">
+      <h2>🐾 Foro y Novedades 🐾</h2>
+      <div class="contenedor">
+        <div class="comentarios">
+          <!-- SECCIÓN AREA COLUMNA 1 -->
+          <h3>♦ Comentarios Recientes ♦</h3>
+          <ul id="comentarios-recientes">
+            <li>No hay comentarios recientes.</li>
+          </ul>
+        </div>
+
+        <div class="noticias">
+          <!-- SECCIÓN AREA COLUMNA 2 -->
+          <h3>♦ Novedades ♦</h3>
+          <div class="novedad-item">
+            <a> Clima en Neuquén </a>
+            <iframe src="https://www.meteored.com.ar/tiempo-en_Neuquen-America+Sur-Argentina-Neuquen--1-16888.html" title="Vista previa del clima" width="300" height="200"></iframe>
+            <p><a href="https://www.meteored.com.ar/tiempo-en_Neuquen-America+Sur-Argentina-Neuquen--1-16888.html" target="_blank">Consulta el clima</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4 DE PATROCINADORES -->
+    <section id="mas-informacion">
+      <h2>🐾 Más Información 🐾</h2>
+      <h3>♦ Enlaces útiles ♦</h3>
+      
+      <!-- SECCIÓN AREA COLUMNA 1 -->
+      <div class="enlaces-utiles">
+        <ul>
+        <li>♦ <a href="https://www.ejemplo1.com" target="_blank">Programa de castracion animal</a></li>
+        <li>♦ <a href="https://www.ejemplo2.com" target="_blank">Reunion de adopcion en Neuquen</a></li>
+        <li>♦ <a href="https://www.ejemplo3.com" target="_blank">Vacunacion de mascotas gratuita</a></li>
+      </ul>
+    </div>
+    </section>
+<!-- SECCIÓN AREA COLUMNA 2 -->
+    <h3>♦ Colaboradores ♦</h3>
+    <section id="colaboradores">
+      <div class="colaboradores">
+        <a href="https://www.ejemplo1.com" target="_blank">
+          <img src="../Fotos/ejemplo patrocinador1.png" alt="Veterinaria Amigos" />
+          <p>Veterinaria Amigos</p>
+        </a>
+        <a href="https://www.ejemplo2.com" target="_blank">
+          <img src="../Fotos/ejemplo patrocinador2.png" alt="Petshop El Perrito" />
+          <p>Petshop El Perrito</p>
+        </a>
+        <a href="https://www.ejemplo3.com" target="_blank">
+          <img src="../Fotos/ejemplo patrocinador3.png" alt="Perros Felices" />
+          <p>Perros Felices</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>🐾 ¡Ayudemos juntos a encontrar a nuestros amigos peludos! 🐾</p>
+    <p>&copy; 2025 Animales Perdidos</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com" title="Facebook">Facebook</a>
+      <a href="https://www.instagram.com" title="Instagram">Instagram</a>
+      <a href="https://www.youtube.com" title="Youtube">Youtube</a>
+    </div>
+  </footer>
+
+</body>
+</html>

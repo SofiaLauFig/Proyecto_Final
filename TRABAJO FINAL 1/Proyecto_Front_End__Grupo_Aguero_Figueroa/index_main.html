@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Sofia Laura Figueroa & Lilen Aguero">
+  <meta name="keywords" content="animales perdidos, mascotas, encontrar mascotas, ayudar mascotas, perros perdidos, gatos perdidos">
+
+  <meta name="description" content="Plataforma para encontrar y publicar animales perdidos. Únete a nuestra comunidad para ofrecer apoyo." />
+  
+  <!-- Titulo de pestaña (mas tarde agregar logo de huella o animal)-->
+  <title>Animales Perdidos</title>
+  
+  <!-- Fuentes Google Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="./styles_main.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+
+<body>
+  <!-- ENCABEZADO -->
+  <header>
+    <section class="barra-superior-header">
+      <div class="top-bar">
+        <div class="botonera">  <!-- botonera -->
+          <a href="BS-ingreso.html" class="button">Ingresar</a>
+          <a href="BS-registro.html" class="button">Registrarse</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="logo-titulo-area">  
+      <div class="logo">  <!-- lugar asignado al logo propio de AP -->
+        <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/logo de contraste.png" alt="Logo de la web: Animales Perdidos">
+      </div>
+
+      <div class="header-title-bar"> <!-- lugar asignado al título AP -->
+        <br> <!-- espacio intencional con motivo gráfico -->
+        <h1> 🐾 Animales Perdidos 🐾 </h1>
+        <h4> Compartí - Buscá - Encontrá </h4> 
+        <br>
+      </div>
+    </section>
+    
+    <section class="barra-inferior-header"> 
+      <nav> <!-- lugar asignado a la barra de navegacion inferior del banner -->
+        <ul class="menu-horizontal">
+          <li class="menu-item">
+
+            <a href="#buscar" class="menu-buscar">Buscar</a> <!-- BUSCAR -->
+            <ul class="menu-desplegable">
+                  <li>
+                    <label for="animal">Tipo de animal:</label>
+                    <select id="animal" name="animal">
+                      <option value="gato">  😸  Gato </option>
+                      <option value="perro">  🐶  Perro</option>
+                      <option value="otro">  Otro</option>
+                    </select>
+                  </li>
+
+                  <li>
+                    <label for="color">Color:</label>
+                    <select id="color" name="color">
+                      <option value="blanco">   ⬜   Blanco</option>
+                      <option value="negro">   ⬛   Negro</option>
+                      <option value="gris">   🪨   Gris</option>
+                      <option value="beige">   🟨   Beige/Marrón claro</option>
+                      <option value="marron-oscuro">   🟫   Marrón oscuro</option>
+                      <option value="mixto">   🔳   Mixto</option>
+                      <option value="otro">Otro</option>
+                    </select>
+                  </li>
+
+                  <li>
+                    <label for="tamaño">Tamaño:</label>
+                    <select id="tamaño" name="tamaño">
+                      <option value="pequeño">   ▪️   Pequeño</option>
+                      <option value="mediano">   ◾   Mediano</option>
+                      <option value="grande">   ⬛   Grande</option>
+                    </select>
+                  </li>
+
+                  <li>
+                    <label for="ciudad">Ciudad:</label>
+                    <select id="ciudad" name="ciudad">
+                      <option value="neuquen">   📍  Neuquén</option>
+                      <option value="cipolletti">   📍  Cipolletti</option>
+                      <option value="fernandez-oro">   📍  Fernández Oro</option>
+                      <option value="plottier">   📍  Plottier</option>
+                    </select>
+                  </li>
+
+                  <li>
+                    <label for="fecha">Perdido hace:</label>
+                    <select id="fecha" name="fecha">
+                      <option value="1-4-semanas">   🕛  1-4 semanas</option>
+                      <option value="1-3-meses">   🕒 1-3 meses</option>
+                      <option value="4-7-meses">  🕟  4-7 meses</option>
+                      <option value="8-12-meses">   🕕  8-12 meses</option>
+                      <option value="+1-año">Más de 1 año</option>
+                    </select>
+                  </li>
+
+                  <li><button type="submit">   🔍  Buscar</button></li>
+                    </ul>
+                </li>
+
+  <!-- Resto del menu desplegable -->
+          <li><a href="publicar.html">Publicar</a></li>   <!-- PUBLICAR (otro html- llenar fichita del animal) #* --> 
+          <li><a href="foro.html">Foro</a></li>           <!-- FORO (otro html- area de socialización) #* -->
+          <li><a href="sobre_nos.html">Sobre Nos</a></li>  <!-- PUBLICAR (otro html- informacion de creadoras y proyecto) #* -->
+          <li><a href="contacto.html">Contacto</a></li>   <!-- CONTACTO  (iria a una ventana emergente con datos, cierra con click) #* -->
+          <li><a href="index_main.html">Inicio</a></li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <section id="recientes"> <!-- SECCION 1 (boceto) -->
+      <h2>🐾 RECIENTES 🐾</h2>
+      <h3>Animales publicados hace poco</h3>
+      <div class="recientes">  <!-- Recientemente perdidos - muestra solo 3 animales -->
+
+            <article class="perrito"> <!-- Los ARTICLES serian las fichitas de animales perdidos (foto+nombre) -->
+              <!-- imagen --> <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/EJEMPLO1.png" alt="Perra Cocker blanca y negra, mediana" /> <!-- Aqui iria una imagen real -->
+              <!-- nombre --> <h3>Coquita</h3> 
+              <!-- descripcion --> <p> Perra cocker blanca y negra perdida en el barrio Centro-Neuquén</p>
+            </article>
+
+            <article class="perrito">
+              <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/EJEMPLO2.png" alt="gatito grande de color baige y blanco" />
+              <h3>Luna</h3>
+              <p>Michi amistosa de 5 años perdida en junio en zona de Aeropuerto</p>
+            </article>
+
+            <article class="perrito"> 
+              <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/ejemplo3.png" alt="Perrito perdido Rocky" />
+              <h3>Rocky</h3>
+              <p>Cachorro mestizo marrón, visto cerca del Parque Central</p>
+            </article>
+      </div>
+    </section>
+
+     <!-- SECCION 2 (boceto) - Galería completa -->
+     <section id="galeria-todos"> <!--serian los animales que la gente sube a la web / ahora las fotos son ejemplos -->
+      <h2>🐾 GALERÍA 🐾</h2>
+      <h3> Todos los animales perdidos</h3>
+      <div class="galeria"> <!-- 15 fotos en modo de cuadricula, con flechas a los lados R/L -->
+
+        <article class="animal-perdido">
+          <!-- imagen --> <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/EJEMPLO1.png" alt="Gatito perdido pequeño multicolor -1" />
+          <!-- nombre --> <h3>Coquita</h3>
+        </article>
+
+        <article class="animal-perdido">
+          <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/EJEMPLO2.png" alt="Perra galgo blanca, perdida -2" />
+          <h3>Luna</h3>
+        </article>
+
+        <article class="animal-perdido">
+          <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/ejemplo3.png" alt="Cachorro labrador de 4 meses -3" />
+          <h3>Rocky</h3>
+        </article>
+
+        <article class="animal-perdido">
+          <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/EJEMPLO2.png" alt="Gato negro de 2 años con collar rojo -4" />
+          <h3>Blacky</h3>
+        </article>
+
+        <article class="animal-perdido">
+          <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/EJEMPLO1.png" alt="Perra callejera adulta de tamaño grande -5" />
+          <h3>Pili</h3>
+        </article>
+
+        <article class="animal-perdido">
+          <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/ejemplo3.png" alt="Cachorro labrador de 4 meses -6" />
+          <h3>Chibi</h3>
+        </article>
+
+        <article class="animal-perdido">
+              <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/EJEMPLO2.png" alt="Gato negro de 2 años con collar rojo -7" />
+              <h3>Mumu</h3>
+            </article>
+
+            <article class="animal-perdido">
+              <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/EJEMPLO1.png" alt="Perra callejera adulta de tamaño grande -8" />
+              <h3>Macarena</h3>
+            </article>
+
+            <article class="animal-perdido">
+              <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/EJEMPLO2.png" alt="Gato negro de 2 años con collar rojo -9" />
+              <h3>Coquita</h3>
+            </article>
+
+            <article class="animal-perdido">
+              <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/EJEMPLO1.png" alt="Perra callejera adulta de tamaño grande -10 " />
+              <h3>Luna</h3>
+            </article>
+
+            <article class="animal-perdido">
+              <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/ejemplo3.png"Cachorro labrador de 4 meses -11" />
+              <h3>Rocky</h3>
+            </article>
+
+            <article class="animal-perdido">
+              <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/EJEMPLO1.png"Gato negro de 2 años con collar rojo -12" />
+              <h3>Lila</h3>
+            </article>
+
+            <article class="animal-perdido">
+              <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/EJEMPLO2.png" alt="Perra callejera adulta de tamaño grande -13" />
+              <h3>Pili</h3>
+            </article>
+
+            <article class="animal-perdido">
+              <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/ejemplo3.png" alt="Perrito perdido Chibi -14" />
+              <h3>Chibi</h3>
+            </article>
+
+            <article class="animal-perdido">
+              <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/EJEMPLO2.png" alt="Gato negro de 2 años con collar rojo -15" />
+              <h3>Mumu</h3>
+            </article>
+      </div>
+    </section>
+
+    <!-- SECCION 3 (boceto) NOVEDADES-->
+    <section id="novedades">
+      <h2>🐾 NOVEDADES 🐾</h2>
+      <div class="contenedor">
+
+     <!--  Seccion de COLUMNA 1 -->
+            <div class="contenedor-foro" class="comentarios"> <!--  Aqui deberan mostrarse los comentarios del FORO html- 5 últimos-->
+              <h3> Últimos comentarios en el foro 💬 </h3>
+              <ul id="comentarios-recientes">
+              <!--  Comentario 1 --> <li><em> (20-04-2025, 16:15) </em> --  Vi una perra que parecía Pitbull perdida afueras de la terminal en Neuquén.</li> <br>
+              <!--  Comentario 2 --><li><em> (15-04-2025, 10:05)</em> --  Creo que están vacunando gratis en la plaza San Martín de 15 a 18 hs.</li> <br>
+              <!--  Comentario 3 --> <li><em> (14-04-2025, 22:02)</em> --  Busco a mi gato Rodolfo, se escapó buscando novia. Para mas info vean la ficha</li> <br>
+              <!--  Comentario 4 -->  <li><em> (13-04-2025, 09:30)</em> --   Me pareció ver un callejero viejito con collar verde, tenia problemas al caminar.</li> <br>
+              <!--  Comentario 5 -->  <li><em> (20-04-2025, 16:15)</em> --   Hola! Gracias por ayudar a los ciudadanos a encontrar a nuestras mascotas perdidas.</li> <br>
+              </ul>
+            </div>
+
+      <!--  Seccion de COLUMNA 2 -->
+            <div class="contenedor-novedades" class="noticias">
+              <!-- SECCIÓN AREA COLUMNA 2 -->
+              <h3>Pronóstico del clima</h3>
+              <div class="novedad-item">
+                <a> Chequeá el clima en tu ciudad    📍  </a>
+                <iframe src="https://www.meteored.com.ar/tiempo-en_Neuquen-America+Sur-Argentina-Neuquen--1-16888.html" title="Vista previa del clima" width="300" height="200"></iframe>
+                <p><a href="https://www.meteored.com.ar/tiempo-en_Neuquen-America+Sur-Argentina-Neuquen--1-16888.html" target="_blank">⛅</a></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+    <!-- SECCION 4 (boceto) PATROCINADORES -->
+        <section id="mas-informacion">
+          <h2>🐾 MÁS INFORMACIÓN 🐾</h2>
+          <h3> Links útiles 🔖</h3>
+          
+  <!-- SECCIÓN AREA COLUMNA 1 -->
+          <div class="enlaces-utiles"> <!--elementos que ayudan a la causa del bienestar animal -->
+            <ul>
+            <li>📌 <a href="https://www.neuquencapital.gov.ar/tramites/bienestar-animal/esterilizacion-de-canes/" target="_blank"> Programa Municipal de Esterilización Canina y Felina en Neuquén</a></li>
+            <li>📌 <a href="https://www.neuquencapital.gov.ar/actividades/programa-de-adopcion-responsable/" target="_blank">Programa Municipal de Adopción Responsable en Neuquen </a></li>
+            <li>📌 <a href="https://www.neuquencapital.gov.ar/agenda-actividades-municipales/vacunacion-antirrabica/" target="_blank">Campaña de Vacunacion de Mascotas (gratis) </a></li>
+            <li>📌 <a href="https://www.neuquencapital.gov.ar/tramites-bienestar-animal/" target="_blank"> Bienestar animal - Tramites y otras consultas </a></li>
+            <li>📌 <a href="https://tusveterinarias.com/neuquen-capital/" target="_blank"> Veterinarias Argentinas - Encontrá tu VET más cercana </a></li>
+            <li>📌 <a href="https://www.neuquencapital.gov.ar/tramites-bienestar-animal/" target="_blank"> Pet Shops MAPS - Equipá a tu mascota, accedé al mapa de las tiendas mas cercanas </a></li>
+            <li>📌 <a href="foro.html/" target="_blank"> FORO de Animales Perdidos - Dejanos tu comentario si viste o encontraste un animal </a></li>
+          </ul>
+
+        </div>
+        </section>
+
+<!-- SECCIÓN AREA COLUMNA 2 -->
+
+<h3>Colaboradores 🤝</h3>
+<section id="colaboradores"> <!-- FotoEnlace de los locales o entidades que soportan nuestro proyecto web -->
+  <div class="colaboradores-container">
+
+    <!-- Colaborador 1 -->
+    <div class="colaborador">
+      <a href="https://www.ejemplo1.com" target="_blank">
+        <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/logo_vet_amigos.png" alt="Logo de la Veterinaria ¨Los Amigos¨ -1" class="foto-colaborador" />
+        <p class="nombre-colaborador">Veterinaria ¨Los Amigos¨</p>
+      </a>
+    </div>
+
+    <!-- Colaborador 2 -->
+    <div class="colaborador">
+      <a href="https://www.ejemplo2.com" target="_blank">
+        <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/logo_petshop_patitas.png" alt="Slogan de ¨Petshop Patitas¨ -2" class="foto-colaborador" />
+        <p class="nombre-colaborador">Petshop ¨Patitas¨</p>
+      </a>
+    </div>
+
+    <!-- Colaborador 3 -->
+    <div class="colaborador">
+      <a href="https://www.ejemplo3.com" target="_blank">
+        <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/logo_muni_nqn.png" alt="Logo de Municipalidad de Neuquén -3" class="foto-colaborador" />
+        <p class="nombre-colaborador">Municipalidad de Neuquén - Animales</p>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA (boceto) -->
+  <footer>
+    <div class="logo">  <!-- lugar asignado al logo propio de AP -->
+      <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/logo de contraste.png" alt="Logo de la web: Animales Perdidos">
+    </div>
+    <p>🐾 ¡Ayudemos juntos a encontrar a nuestros amigos peludos! 🐾</p>
+    <p>&copy; 2025 Animales Perdidos</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com" title="Facebook">Facebook</a>
+      <a href="https://www.instagram.com" title="Instagram">Instagram</a>
+      <a href="https://www.youtube.com" title="Youtube">Youtube</a>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

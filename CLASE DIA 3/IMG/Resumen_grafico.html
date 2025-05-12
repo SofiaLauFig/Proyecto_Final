@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Resumen HTML + CSS - Sofi</title>
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin: 30px;
+      line-height: 1.6;
+    }
+
+    h1 {
+      color: #1c4c7c;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #2e5984;
+    }
+
+    code {
+      background-color: #eaeaea;
+      display: block;
+      padding: 10px;
+      margin: 10px 0;
+      font-family: 'Courier New', monospace;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Resumen HTML + CSS</h1>
+
+  <h2>1. Estructura básica de un archivo HTML</h2>
+  <code>
+&lt;!DOCTYPE html&gt;<br>
+&lt;html lang="es"&gt;<br>
+&nbsp;&nbsp;&lt;head&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Mi página&lt;/title&gt;<br>
+&nbsp;&nbsp;&lt;/head&gt;<br>
+&nbsp;&nbsp;&lt;body&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Contenido visible --&gt;<br>
+&nbsp;&nbsp;&lt;/body&gt;<br>
+&lt;/html&gt;
+  </code>
+
+  <h2>2. CSS embebido (dentro del mismo HTML)</h2>
+  <code>
+&lt;style&gt;<br>
+&nbsp;&nbsp;body {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;background-color: lightblue;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;font-family: Arial, sans-serif;<br>
+&nbsp;&nbsp;}<br>
+&lt;/style&gt;
+  </code>
+
+  <h2>3. CSS externo (archivo separado)</h2>
+  <ul>
+    <li>Crear un archivo llamado <strong>styles.css</strong></li>
+    <li>Escribir el CSS dentro de ese archivo:</li>
+  </ul>
+  <code>
+body {<br>
+&nbsp;&nbsp;background-color: #f0f8ff;<br>
+&nbsp;&nbsp;font-family: sans-serif;<br>
+}
+  </code>
+  <ul>
+    <li>Luego, enlazarlo desde el HTML con:</li>
+  </ul>
+  <code>
+&lt;link rel="stylesheet" href="styles.css"&gt;
+  </code>
+
+  <h2>4. Orden de lectura del navegador</h2>
+  <p>El navegador lee primero el CSS externo y luego el embebido. Si hay estilos repetidos, el último que aparece gana.</p>
+
+  <h2>5. ¿Cuándo usar cada uno?</h2>
+  <ul>
+    <li>✅ CSS embebido: ideal para prácticas y tareas cortas</li>
+    <li>✅ CSS externo: ideal para proyectos largos o páginas múltiples</li>
+    <li>⚠️ Podés usar ambos, pero el orden importa</li>
+    <li>⚠️ CSS en línea (style="...") se usa solo para casos puntuales, no recomendable en proyectos grandes</li>
+  </ul>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Sofia Laura Figueroa & Lilen Aguero">
+  <meta name="keywords" content="animales perdidos, mascotas, encontrar mascotas, ayudar mascotas, perros perdidos, gatos perdidos">
+  <meta name="description" content="Plataforma para encontrar y publicar animales perdidos. Únete a nuestra comunidad para ofrecer apoyo." />
+  
+  <!-- Titulo de pestaña (mas tarde agregar logo de huella o animal)-->
+  <title>Animales Perdidos - Publicar </title>
+  
+  <!-- Fuentes Google Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles_main.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+
+<body>
+  <!-- ENCABEZADO -->
+  <header>
+    <section class="barra-superior-header">
+      <div class="top-bar">
+        <div class="botonera">  <!-- botonera -->
+          <a href="BS-ingreso.html" class="button">Ingresar</a>
+          <a href="BS-registro.html" class="button">Registrarse</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="logo-titulo-area">  
+      <div class="logo">  <!-- lugar asignado al logo propio de AP -->
+        <img src="../Proyecto_Front_End__Grupo_Aguero_Figueroa/Multimedia - Fotos/logo de contraste.png" alt="Logo de la web: Animales Perdidos">
+      </div>
+
+      <div class="header-title-bar"> <!-- lugar asignado al título AP -->
+        <br> <!-- espacio intencional con motivo gráfico -->
+        <h1> 🐾 Animales Perdidos 🐾 </h1>
+        <h4> Compartí - Buscá - Encontrá </h4> 
+        <br>
+      </div>
+    </section>
+    
+    <section class="barra-inferior-header"> 
+      <nav> <!-- lugar asignado a la barra de navegacion inferior del banner -->
+        <ul class="menu-horizontal">
+          <li class="menu-item">
+
+            <a href="#buscar" class="menu-buscar">Buscar</a> <!-- BUSCAR -->
+            <ul class="menu-desplegable">
+                  <li>
+                    <label for="animal">Tipo de animal:</label>
+                    <select id="animal" name="animal">
+                      <option value="gato">  😸  Gato </option>
+                      <option value="perro">  🐶  Perro</option>
+                      <option value="otro">   Otro</option>
+                    </select>
+                  </li>
+
+                  <li>
+                    <label for="color">Color:</label>
+                    <select id="color" name="color">
+                      <option value="blanco">   ⬜   Blanco</option>
+                      <option value="negro">   ⬛   Negro</option>
+                      <option value="beige">   🟨   Beige/Marrón claro</option>
+                      <option value="marron-oscuro">   🟫   Marrón oscuro</option>
+                      <option value="mixto">   🔳   Mixto</option>
+                      <option value="otro">Otro</option>
+                    </select>
+                  </li>
+
+                  <li>
+                    <label for="tamaño">Tamaño:</label>
+                    <select id="tamaño" name="tamaño">
+                      <option value="pequeño">   ▪️   Pequeño</option>
+                      <option value="mediano">   ◾   Mediano</option>
+                      <option value="grande">   ⬛   Grande</option>
+                    </select>
+                  </li>
+
+                  <li>
+                    <label for="ciudad">Ciudad:</label>
+                    <select id="ciudad" name="ciudad">
+                      <option value="neuquen">   📍  Neuquén</option>
+                      <option value="cipolletti">   📍  Cipolletti</option>
+                      <option value="fernandez-oro">   📍  Fernández Oro</option>
+                      <option value="plottier">   📍  Plottier</option>
+                    </select>
+                  </li>
+
+                  <li>
+                    <label for="fecha">Perdido hace:</label>
+                    <select id="fecha" name="fecha">
+                      <option value="1-4-semanas">   🕛  1-4 semanas</option>
+                      <option value="1-3-meses">   🕒 1-3 meses</option>
+                      <option value="4-7-meses">  🕟  4-7 meses</option>
+                      <option value="8-12-meses">   🕕  8-12 meses</option>
+                      <option value="+1-año">Más de 1 año</option>
+                    </select>
+                  </li>
+
+                  <li><button type="submit">   🔍  Buscar</button></li>
+                    </ul>
+                </li>
+
+  <!-- Resto del menu desplegable -->
+          <li><a href="publicar.html">Publicar</a></li>   <!-- PUBLICAR (otro html- llenar fichita del animal) #* --> 
+          <li><a href="foro.html">Foro</a></li>           <!-- FORO (otro html- area de socialización) #* -->
+          <li><a href="nosotros.html">Sobre Nos</a></li>  <!-- PUBLICAR (otro html- informacion de creadoras y proyecto) #* -->
+          <li><a href="#">Contacto</a></li>   <!-- CONTACTO  (iria a una ventana emergente con datos, cierra con click) #* -->
+          <li><a href="inicio.html">Inicio</a></li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL --> <!-- CONTENIDO PRINCIPAL --> <!-- CONTENIDO PRINCIPAL --> <!-- CONTENIDO PRINCIPAL --> <!-- CONTENIDO PRINCIPAL -->
+  <main>

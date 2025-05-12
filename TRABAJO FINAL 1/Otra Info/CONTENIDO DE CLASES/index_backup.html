@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Animales Perdidos </title> <!-- agregar icono -->
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header> <!-- Banner encabezado de la web. Incluira el logo, el menú de navegación inferior, superior y la foto con titiulo-->
+
+        <!-- logo dentro del banner.-->
+        <div class="logo">
+            <a href="index.html">
+                <img src="../Fotos/logo oficial.png" alt="Logo de Animales Perdidos">
+            </a>
+        </div>
+
+        <!--  *Top Section 1 Menu de redes sociales y botones-->
+        <nav class="social-menu">
+            <ul> 
+                <li><a href="https://www.instagram.com" target="_blank"> IG </a></li>
+                <li><a href="https://www.facebook.com" target="_blank"> FB </a></li>
+                <li><a href="https://www.youtube.com" target="_blank"> YT </a></li>
+            </ul>
+        
+        <div class="dos-botones-sup">
+            <a href="ingresar.html" class="button">Ingresar</a>
+            <a href="registrarse.html" class="button">Registrarse</a>
+        </div>
+
+        <nav>
+            <ul class="menu-horizontal">
+                
+                <li class="menu-item"> <!-- Buscar -->
+                    <a href="#buscar" class="menu-buscar">Buscar</a>
+                    <ul class="menu-desplegable"> <!-- Menú desplegable oculto -->
+                        
+                        <li>
+                            <p> Selecciona el tipo de animal:</p>
+                            <div class="animal-elegir">
+                                
+                                <button class="animal-button" value="gato">
+                                    <img src="../Fotos/gato.png" alt="Gato" class="animal-icono">
+                                    <span>Gato</span>
+                                </button>
+                                
+                                <button class="animal-button" value="perro">
+                                    <img src="../Fotos/perro.png" alt="Perro" class="animal-icono">
+                                    <span>Perro</span>
+                                </button>
+                                
+                                <button class="animal-button" value="otro">
+                                    <img src="../Fotos/otro.png" alt="Otro" class="animal-icon">
+                                    <span>Otro</span>
+                                </button>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <label for="color">Color:</label>
+                        
+                            <!-- Cuadrícula de colores para selección visual -->
+                            <div class="color-grid">
+                                <button class="color-option" value="blanco" style="background-color: #ffffff;" title="Blanco"></button>
+                                <button class="color-option" value="negro" style="background-color: #000000;" title="Negro"></button>
+                                <button class="color-option" value="beige" style="background-color: #e2e29a;" title="Beige"></button>
+                                <button class="color-option" value="marron-oscuro" style="background-color: #81460b;" title="Marrón Oscuro"></button>
+                                <button class="color-option" value="mixto" style="background: linear-gradient(to right, #ffffff, #000000);" title="Mixto"></button>
+                                <button class="color-option" value="otro" style="background-color: #d3d3d3;" title="Otro"></button>
+                            </div>
+                        
+                            <!-- Lista desplegable tradicional (opcional) -->
+                            <select id="color" name="color">
+                                <option value="blanco">Blanco</option>
+                                <option value="negro">Negro</option>
+                                <option value="beige">Beige</option>
+                                <option value="marron-oscuro">Marrón Oscuro</option>
+                                <option value="mixto">Mixto</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </li>
+                        
+                        <li>
+                            <label for="tamaño">Tamaño:</label>
+                        
+                            <!-- Cuadrícula de tamaños con imágenes -->
+                            <div class="opciones-tamaño">
+                                <!-- Botón para Pequeño -->
+                                <button class="opciones-tamaño" value="pequeño">
+                                    <img src="../Fotos/S-DOG.png" alt="Pequeño" class="size-icono">
+                                    <span>Pequeño</span>
+                                </button>
+                                <!-- Botón para Mediano -->
+                                <button class="size-button" value="mediano">
+                                    <img src="../Fotos/M-DOG.png" alt="Mediano" class="size-icono">
+                                    <span>Mediano</span>
+                                </button>
+                                <!-- Botón para Grande -->
+                                <button class="size-button" value="grande">
+                                    <img src="../Fotos/L-DOG.png" alt="Grande" class="size-icono">
+                                    <span>Grande</span>
+                                </button>
+                            </div>
+                        
+                            <!-- Lista desplegable tradicional -->
+                            <select id="tamaño" name="tamaño">
+                                <option value="pequeño">Pequeño</option>
+                                <option value="mediano">Mediano</option>
+                                <option value="grande">Grande</option>
+                            </select>
+                        </li>
+                                                
+                        <li>
+                            <label for="ciudad">Ciudad:</label>
+                            <select id="ciudad" name="ciudad">
+                                <option value="cipolletti">Cipolletti</option>
+                                <option value="neuquen">Neuquén</option>
+                                <option value="fernandez-oro">Fernández Oro</option>
+                                <option value="plottier">Plottier</option>
+                            </select>
+                        </li>
+                        
+                        <li>
+                            <label for="fecha">Perdido hace:</label>
+                            <div class="timeline-container">
+
+                                <!-- Línea del tiempo para elegir cuando se perdio -->
+                                <div class="timeline">
+                                    <div class="timeline-marker"></div> <!-- Bolita viajera -->
+                                </div>
+
+                                <!-- Opciones debajo de la línea -->
+                                <div class="timeline-labels">
+                                    <span data-value="1-5-semanas">1-5 semanas</span>
+                                    <span data-value="1-3-meses">1-3 meses</span>
+                                    <span data-value="4-6-meses">4-6 meses</span>
+                                    <span data-value="6-12-meses">6 meses - 1 año</span>
+                                    <span data-value="+1-anio">Más de 1 año</span>
+                                </div>
+                            </div>
+                        
+                            <!-- Menú desplegable tradicional -->
+                            <select id="fecha" name="fecha">
+                                <option value="1-5-semanas">1-5 semanas</option>
+                                <option value="1-3-meses">1-3 meses</option>
+                                <option value="4-6-meses">4-6 meses</option>
+                                <option value="6-12-meses">6 meses - 1 año</option>
+                                <option value="+1-anio">Más de 1 año</option>
+                            </select>
+                        </li>
+                        
+                        <li>
+                            <button type="submit">Buscar</button>
+                        </li>
+                    </ul>
+                </li>
+
+                <!--el resto de las opciones del menú -->
+
+                <li><a href="publicar.html">Publicar</a></li>
+                <li><a href="foro.html">Foro</a></li>
+                <li><a href="nosotras.html">Sobre Nosotras</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="inicio.html">Inicio</a></li>
+            </ul>
+        </nav>
+        
+
+<main>  <!-- Contendrá el contenido principal de la página.-->
+
+<!-- SECCION 1 - GALERIA DE PERROS RECIENTEMENTE PERDIDOS -->
+        <section id="recientes"> <!-- incluir PETS IDs *fotos y descripciones de los animales perdidos.-->
+            <h2> 🐾 Recientes 🐾</h2> </section>
+            <div class="recientes">
+                    
+                <!-- Cada animal como un elemento individual (se muestran solo 3 por ahora) -->
+                    <div class="perrito">
+                        <img src="../Fotos/Animales Perdidos (3).png" alt="Perrito perdido 1">
+                        <h3>Nombre: Coquita </h3>
+                        <p>Descripción: Perra pitbull perdida en el barrio Centro.</p>
+                    </div>
+
+                    <div class="perrito">
+                        <img src="../Fotos/Animales Perdidos (4).png" alt="Perrito perdido 2">
+                        <h3>Nombre: Luna</h3>
+                        <p>Descripción: michi miau miau , MIchi.</p>
+                    </div>
+
+                    <div class="perrito">
+                        <img src="../Fotos/Animales Perdidos (5).png" alt="Perrito perdido 3">
+                        <h3>Nombre: Rocky</h3>
+                        <p>Descripción: Gato mestizo color marrón, visto cerca del parque central.</p>
+                    </div>
+                </div>
+
+
+<!-- SECCION 2 - GALERIA DE TODOS LOS PERROS PERDIDOS (se muestran solo 8 por ahora) -->
+        <section id="galeria-todos">
+            <h2> 🐾 Galería 🐾 </h2>
+
+            <!-- Contenedor de animales -->
+            <div class="galeria">
+                <!-- Cada animal como un elemento individual -->
+                <div class="animal-perdido">
+                    <img src="../Fotos/EJEMPLO2.png" alt="Perrito perdido 1">
+                    <h3>Coquita</h3>
+                </div>
+
+                <div class="animal-perdido">
+                    <img src="../Fotos/EJEMPLO1.png" alt="Perrito perdido 2">
+                    <h3>Luna</h3>
+                </div>
+
+                <div class="animal-perdido">
+                    <img src="../Fotos/ejemplo3.png" alt="Perrito perdido 3">
+                    <h3>Rocky</h3>
+                </div>
+
+                <div class="animal-perdido"> 
+                    <img src="../Fotos/EJEMPLO2.png" alt="Perrito perdido 4">
+                    <h3>Lila</h3>
+                </div>
+
+                <div class="animal-perdido">
+                    <img src="../Fotos/EJEMPLO1.png" alt="Perrito perdido 5">
+                    <h3>Pili</h3>
+                </div>
+
+                <div class="animal-perdido">
+                    <img src="../Fotos/ejemplo3.png" alt="Perrito perdido 6">
+                    <h3>Chibi</h3>
+                </div>
+
+                <div class="animal-perdido">
+                    <img src="../Fotos/EJEMPLO2.png" alt="Perrito perdido 7">
+                    <h3>Mumu</h3>
+                </div>
+
+                <div class="animal-perdido">
+                    <img src="../Fotos/EJEMPLO1.png" alt="Perrito perdido 8">
+                    <h3>Macarena</h3>
+                </div>
+            </div>
+        </section>
+
+
+    <!-- SECCION 3 - AREA PARA MOSTRAR COMENTARIOS RECIENTES -->
+
+    <section id="foro-novedades">
+        <h2> 🐾 Foro y Novedades 🐾 </h2>
+        <div class="contenedor">
+            <!-- Columna izquierda: Últimos comentarios dinámicos -->
+            <div class="comentarios">
+                <h3>♦ Comentarios Recientes ♦</h3>
+                <ul id="comentarios-recientes">
+                    <!-- Los comentarios se insertarán aquí automáticamente luego, desde el FORO -->
+                    <li>No hay comentarios recientes.</li>
+                </ul>
+            </div>
+            
+            <!-- Columna derecha: Novedades -->
+          
+            <div class="novedades">
+                <h3>♦ Novedades ♦</h3>
+
+                <!-- Cuadrado 1: Clima -->
+                <div class="novedad-item">
+                    <iframe src="https://weather.com" title="Vista previa del clima" width="300" height="200"></iframe>
+                    <p><a href="https://weather.com" target="_blank">Consulta el clima</a></p>
+                </div>
+
+                <!-- Cuadrado 2: Razas de perros -->
+                <div class="novedad-item">
+                    <iframe src="https://es.wikipedia.org/wiki/Razas_de_perros_más_inteligentes" title="Vista previa de razas de perros" width="300" height="200"></iframe>
+                    <p><a href="https://es.wikipedia.org/wiki/Razas_de_perros_más_inteligentes" target="_blank">Razas de perros más inteligentes</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+
+<!-- SECCION 4 - AREA DE ENLACES UTILES Y PATROCINADORES DE ANIMALES PERDIDOS WEB -->
+    <section id="enlaces-patrocinadores">
+        <h2> 🐾 Enlaces Útiles y Patrocinadores 🐾 </h2>
+
+        <div class="contenedor-enlaces-patrocinadores">
+            <!-- Enlaces útiles -->
+            <div class="enlaces-utiles">
+                <h3> ♦ Enlaces Útiles ♦ </h3>
+                <ul>
+                    <li><a href="https://www.google.com/maps" target="_blank">Encuentra clínicas veterinarias por tu zona</a></li>
+                    <li><a href="https://www.adopta.com" target="_blank">Adoptá una mascota</a></li>
+                    <li><a href="https://www.mascotasperdidas.com" target="_blank">Publica una alerta de pérdida</a></li>
+                    <li><a href="https://weather.com" target="_blank">Consulta el clima para hoy en el valle</a></li>
+                </ul>
+            </div>
+
+            <!-- Patrocinadores -->
+            <div class="patrocinadores">
+                <h3> ♦ Patrocinadores ♦ </h3>
+                <div class="patrocinador">
+                    <img src="../Fotos/ejemplo patrocinador1.png" alt="Logo de patrocinador 1">
+                </div>
+                <div class="patrocinador">
+                    <img src="../Fotos/ejemplo patrocinador2.png" alt="Logo de patrocinador 2">
+                </div>
+                <div class="patrocinador">
+                    <img src="../Fotos/ejemplo patrocinador3.png" alt="Logo de patrocinador 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+    
+
+<!-- SECCION PIE DE PAGINA - IGUAL PARA TODAS, COMO EL HEADER -->
+<footer> 
+    
+    <div class="logo">
+        <a href="index.html">
+        <img src="../Fotos/logo oficial.png" alt="Logo de Animales Perdidos">
+        </a>
+    </div>
+
+    <div class="footer-info">
+        <p>&copy; 2025 Animales Perdidos</p>
+        <p>Proyecto educativo de programación y colaboración social.</p>
+    </div>
+
+</footer>
+   
+</body>
+</html>

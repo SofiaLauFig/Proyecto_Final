@@ -1,0 +1,420 @@
+ /* RESET GENERAL de margenes para que no interfieran con el posicionamiento*/  
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid rgb(0, 255, 208); /* Agrega el borde rojo a todos los elementos para revisar el boxing */
+}
+
+/* ESTILOS BASE */
+body {
+    font-family: 'Raleway', sans-serif; /* Está denotado en el HTML igual */
+    background-color: #f5f5f5b6;
+    color: #424242;  
+}
+
+/* Listas sin estilo por defecto */
+ul, ol {
+    list-style: none;
+}
+
+/* Títulos generales */
+h1, h2, h3, h4 { 
+    margin: 10px 0;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+h4 {
+    font-size: 18px;
+    color: #f1f1f1;
+    font-weight: 800;
+    text-align: center;
+}
+
+/* HEADER - 3 secciones (boceto) TOP, MID, BOT */
+
+/* Barra superior */
+.barra-superior-header {
+    background-color: #f1f1f1dc;
+    color: #333;
+    padding: 10px 20px;
+    margin-bottom: 4px; /* espacio debajo - decorativo */
+    border-bottom: 2px solid #229799; 
+
+}
+
+/* Top bar y zona de botones */
+.top-bar, .botonera {
+    display: flex;  /* flexbox */
+    justify-content: flex-end;  /* Alineo elementos hijos a la izqueirda *botones* */
+
+    align-items: center; /* Centro el texto dentro de los botones */
+    gap: 10px;
+    font-size: 20px;
+    
+}
+
+.botonera a.button {
+    background-color: #229799;
+    color: white;
+    padding: 12px 25px;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;  /* borramos la linea del hipervinculo abajo de las palabras*/
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;  /* mas accesibilidad por contraste*/
+   
+}
+
+.botonera a.button:hover {    /* hover para ponerle mas onda, aclarar el color al pasar y agrandar un poco*/
+    background-color: #0ddad3;
+    transform: scale(1.1);
+    
+}
+
+/* Logo y Area del Título principal */
+.logo-titulo-area {
+    background-color: #424242;  /* Fondo color del logo */
+    color: #fff;  /* Animales Perdidos*/
+    display: flex;  /* Flexbox para alinear logo y titulo */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;  /* Margen interno entre elementos del mismo contenedor*/
+    gap: 20px; /* Separacion entre elementos hijos y padre: logo y titulo*/
+    text-shadow: none;
+    
+}
+
+.logo img {
+    max-width: 250px;     /* Ajustada*/
+}
+
+.header-title-bar {   /* Titulo*/
+    flex: 1;  /* que ocupe todo el espacio restante del contenedor*/
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    padding: 15px 0;
+}
+
+/* Barra inferior del header */
+.barra-inferior-header {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 5px 20px;
+    text-align: center;
+    width: 100%; /* barra de navegacion a lo largo del 100% del ancho de la panntalla */
+
+    margin-top: 4px; /* esto es meramente decorativo */
+    border-top: 2px solid #229799; 
+    border-bottom: 2px solid #229799; 
+    box-shadow: 0 2px 4px rgba(20, 187, 189, 0.993);
+}
+
+/* MENÚ PRINCIPAL */
+nav {
+    background-color: #f1f1f1;  /* por ahora gris claro, tal vez cambie luego */
+}
+
+/* Menú de hipervinculos  NAV */
+.menu-horizontal {
+    display: flex;  /* flexbox para alinear los hijos-links en modo horizontal cual menu */
+    justify-content: space-between;
+    align-items: center;  /* alineacion vertical dentro del contenedor */
+    gap: 0;
+    width: 100%;
+    padding: 4 20px;
+    font-size: 18px;
+    font-weight: 800;
+    
+}
+
+/* Links del menú */
+.menu-horizontal a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;  /* permitira efectos posteriores en el elemento */
+}
+
+/* Hover efecto */
+.menu-horizontal a:hover {
+    color: #48CFCB;
+    transform: scale(1.1);  /* Mismo efecto que los botones del top banner */
+}
+
+/* Ítem especial 'Buscar' */
+.menu-horizontal a.buscar-item {
+    background-color: #229799;
+    color: white;
+    border-radius: 8px;
+    padding: 12px 20px;  /* espacio para facilitar lectura */
+}
+
+.menu-horizontal a.buscar-item:hover {
+    background-color: #0ddad3;
+    transform: scale(1.1); /* mismo estilo que los demas hovers */
+}
+
+/* Estilo para cada ítem */
+.menu-item {
+    position: relative;  /* posicion mas conveniente */
+}
+
+.menu-horizontal > li {  /* va a afectar a todos los li  */
+    margin: 0;
+    padding: 10px 0;
+    position: relative;
+}
+
+/* Menú desplegable - se ve solo al hacer click */
+.menu-desplegable {
+    display: none;
+    position: absolute;
+    top: 100%; /* alto de pagina */
+    background-color: #f1f1f1f1;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;  /* espaciado interno  */
+    width: 350px;   /* ancho fijo  */
+    height: auto;   /* alto ajustable al contenido  */
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;  /* barrita de navegacion de ser necesaria en eje Y   */
+    border: 4px solid #48CFCB; /* Borde verde agua */
+}
+
+.menu-item:hover .menu-desplegable {
+    display: block;
+}
+
+/* Estilos internos de menú desplegable */
+.menu-desplegable label,
+.menu-desplegable select {
+    display: block;
+    margin-bottom: 25px; /* MÁS ESPACIO ENTRE OPCIONES */
+    font-size: 22px; /* MÁS GRANDE */
+    font-weight: bold;
+    color: #333; /* Más contraste */
+}
+
+/* Alineación de los labels en el menú desplegable */
+.menu-desplegable label {
+    text-align: left;  /* Alinea el texto de los labels a la izquierda */
+    margin-bottom: 10px; /* Ajusta el espaciado */
+}
+
+/* Alineación de los selects en el menú desplegable (si los hay) */
+.menu-desplegable select {
+    text-align: left;  /* Alinea el texto dentro de los selects */
+}
+
+/* Si quieres también ajustar el padding de los labels para mayor precisión */
+.menu-desplegable label {
+    padding-left: 15px;
+}
+
+/* Estilo para las opciones dentro del select */
+.menu-desplegable select option {      /* Aun tenemos que trabajar en este diseño */
+    background-color: #f5f5f5;
+    color: #424242;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+}
+
+.menu-desplegable select option:hover {  /* efecto parecido a los anteriores para harmonizar */
+    background-color: #229799;
+    color: white;
+}
+
+/* Botón en menú desplegable */
+.menu-desplegable button {   /* efecto parecido a los anteriores para harmonizar */
+    background-color: #229799;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-desplegable button:hover {
+    background-color: #0ddad3;
+    transform: scale(1.08);
+}
+
+/* SECCIÓN: RECIENTES */
+/* ========================== */
+#recientes {
+    padding: 40px 20px;
+    text-align: center;
+    /* border: 2px solid red; Eliminar borde rojo */
+}
+
+.recientes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.perrito {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 15px;
+    width: 280px;
+    /* border: 2px solid red; Eliminar borde rojo */
+}
+
+.perrito img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ========================== */
+/* SECCIÓN: GALERÍA */
+/* ========================== */
+#galeria-todos {
+    padding: 40px 20px;
+    background-color: #fef6f3;
+    text-align: center;
+    /* border: 2px solid red; Eliminar borde rojo */
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.animal-perdido {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 10px;
+    /* border: 2px solid red; Eliminar borde rojo */
+}
+
+.animal-perdido img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* ========================== */
+/* SECCIÓN: FORO Y NOVEDADES */
+/* ========================== */
+#foro-novedades {
+    padding: 40px 20px;
+    /* border: 2px solid red; Eliminar borde rojo */
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.comentarios, .novedades {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    width: 320px;
+    /* border: 2px solid red; Eliminar borde rojo */
+}
+
+.novedad-item {
+    margin-bottom: 20px;
+}
+
+.novedad-item p {
+    margin-top: 10px;
+}
+
+.novedad-item a {
+    text-decoration: none;
+    color: #48CFCB;
+    font-weight: bold;
+}
+
+/* ========================== */
+/* SOCIAL LINKS */
+/* ========================== */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+/* ========================== */
+/* RESPONSIVE (TABLET Y MOBILE) */
+/* ========================== */
+@media (max-width: 768px) {
+    .menu-horizontal {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .menu-horizontal > li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-desplegable {
+        position: static;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        border: 4px solid #48CFCB; /* Mantener el borde también en móviles */
+    }
+}
+
+/* AREA GRID COMENTARIOS Y NOVEDADES*/
+.contenedor {
+    display: grid; 
+    grid-template-columns: 2fr 1fr; 
+    grid-template-rows: 3fr 1fr;
+}
+
+.contenedor-novedades{
+    background-color: #0ddad3;
+}
+
+.contenedor-foro{
+    background-color: #fff;
+}

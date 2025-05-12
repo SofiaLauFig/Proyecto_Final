@@ -1,0 +1,139 @@
+header {
+    background-color: #f9f9f9; /* Cambia el color de fondo */
+    text-align: center;
+    padding: 20px;
+}
+
+.logo img {
+    max-width: 150px; /* Ajusta el tamaño del logo */
+}
+
+.social-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 0;
+}
+
+.social-menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+.social-menu a:hover {
+    color: #2a9d8f;
+}
+
+
+.contenedor {
+    display: flex;
+    gap: 20px; /* Espacio entre Comentarios y Novedades */
+}
+
+.comentarios, .novedades {
+    flex: 1; /* Ambas columnas ocupan el mismo espacio */
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.comentarios ul {
+    max-height: 200px;
+    overflow-y: auto;
+    list-style: none;
+    padding: 0;
+}
+
+
+.contenedor-enlaces-patrocinadores {
+    display: flex;
+    gap: 20px; /* Espacio entre columnas */
+}
+
+.enlaces-utiles a {
+    display: block;
+    text-decoration: none;
+    color: #2a9d8f;
+    margin-bottom: 10px;
+}
+
+.patrocinadores img {
+    max-width: 100px; /* Tamaño de los logos */
+    margin: 10px 0;
+}
+
+/* Menú horizontal */
+.menu-horizontal {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.menu-horizontal a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu-horizontal a:hover {
+    background-color: #2a9d8f;
+    color: white;
+}
+
+/* Menú desplegable */
+.menu-desplegable {
+    display: none; /* Oculto inicialmente */
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+    list-style: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Muestra el menú desplegable al pasar el mouse */
+.menu-item:hover .menu-desplegable {
+    display: block;
+}
+
+/* Filtros y botones */
+.menu-desplegable li {
+    margin-bottom: 10px;
+}
+
+.menu-desplegable label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.menu-desplegable select, .menu-desplegable button {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #21867a;
+}
+
+.menu-item:hover .menu-desplegable {
+    display: block;
+}
+

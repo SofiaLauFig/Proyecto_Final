@@ -1,0 +1,76 @@
+<!DOCTYPE html>                                                                         <!-- va a ser pagina web -->
+<html lang="es">                                                                        <!-- uso de caracteres de lengua esp -->
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Contacto</title>                                                  <!-- titulo de pestaña de navegador -->
+</head>
+<body>
+
+  <form>                                                                                  <!-- etiqueta principal del formulario -->
+    <fieldset>                                                                            <!-- lo que va recuadrado -->
+      <legend><strong>Información Personal:</strong></legend>                             <!-- título del recuaro "Información Personal" que seria fieldset -->
+
+      <!-- Secc. Producto + Botones de radio -->
+    
+    <div>                                                                                 <!-- uso de div para categorizar grupos -->
+      <label>Producto</label><br>                                                         <!-- Titulo sobre los botones de radio -->
+      <input type="radio" id="pantalones" name="producto" value="pantalones">             <!-- boton -->
+      <label for="pantalones">Pantalones</label>                                          <!-- titulo al lado del boton-->                                      
+    
+      <input type="radio" id="remeras" name="producto" value="remeras">
+      <label for="remeras">Remeras</label>
+      
+      <input type="radio" id="buzos" name="producto" value="buzos">
+      <label for="buzos">Buzos</label>
+    </div>
+    
+
+      <br><br>                                                                           <!-- Espaciado doble para que se vea igual al ejemplo -->
+
+      <!-- Secc. Nombre -->
+
+    <div>                                                                               <!-- uso de div para categorizar grupos -->
+      <label for="nombre">Nombre:</label><br>                                           <!-- etiqueta para cada campo (recuadros), asociada al id -->
+      <input type="text" id="nombre" name="nombre" placeholder="Nombre"><br><br>        <!-- recuadro de entrada de texto de: nombre -->
+
+      <!-- Secc. Apellido -->
+
+      <label for="apellido">Apellido:</label><br>                                       <!-- etiqueta para cada campo (recuadros), asociada al id -->
+      <input type="text" id="apellido" name="apellido" placeholder="Apellido"><br><br>  <!-- recuadro de entrada de texto de: apellido -->
+    </div>
+
+      <!-- Sec. Talle con menú desplegable -->
+
+    <div>                                                                               <!-- uso de div para categorizar grupos -->
+      <label for="talle">Talle:</label>                                                 <!-- etiqueta visible para el usuario - se vincula con el id="talle"-->
+      <select name="talle" id="talle">                                                  <!--abre la lista desplegable-->
+        <option value="small"> Small </option>                                            <!--opcion visible al usuario, palabras Blancas-->
+        <option value="medium"> Medium </option>                                          <!--dato que se envia al receptor del formulatio, VALUE-->
+        <option value="large" selected> Large </option>                                   <!--Cuando el usuario abra el formulario, ya estará seleccionado "LARGE", sin que tenga que hacer clic-->
+        
+      </select>
+    </div>
+      <br><br>                                                                          <!-- Espaciado para que se vea igual al ejemplo -->
+
+      <!-- Secc. Botón de envío -->  
+    <div>                                                                               <!-- uso de div para poder darle formato CSS luego -->
+      <input type="submit" value="Enviar">                                              <!-- Value es el texto que aparece en el botón. Es lo que ve el usuario-->
+    </div>                                                                              <!--El texto (value) lo elige uno, puede ser: "Enviar", "Guardar", "Suscribirme", etc.-->
+    </fieldset>                                                                         <!--termina el area donde se contemplo la info-->
+
+
+  </form>
+
+</body>
+</html>
+
+<!-- Valores usados: <form>, <fieldset>, <legend>, <label>, <input>, <select> y <option> -->
+    <!-- Utilizacion de <div> para agrupar contenidos relacionados -->
+<!-- Boton de radio e input value -->
+    <!-- uso de <Legend> para titulos de campo - fieldset -->
+<!-- seleccion predeterminada para el usuario - el atributo <selected> en la opción por defecto (Large) del menú desplegable -->
+    <!-- agregar <placeholder> en los inputs de texto para dar una pista visual al usuario -->
+<!-- comentarios explicativos de paso a paso, para no olvidar -->
+ <!-- uso de negritas <strong>- la cursiva ya quedaba muy informal -->
+<!-- organizar el codigo en parrafos o areas segun funcionalidad, para que sea facil de encontrar el error -->
+ <!-- conservar los niveles en orden para no olvidarse cerrar las etiquetas -->
